@@ -25,7 +25,7 @@ class Album:
     def __str__(self):
         result_track = ''
         for track in self.list_track:
-            result_track += 8 * ' ' + str(track.__str__()) + '\n'
+            result_track += 8 * ' ' + str(track) + '\n'
         result = f'Name group: {self.name_group}\nName album: {self.name_album}\nTracks:\n'
         return result + result_track
 
