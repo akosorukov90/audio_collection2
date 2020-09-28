@@ -42,6 +42,22 @@ class Track:
         result = f'{self.name_track} - {self.duration} min'
         return result
 
+    def __eq__(self, track):
+        return self.duration == track
+
+    def __gt__(self, track):
+        return self.duration > track
+
+    def __lt__(self, track):
+        return self.duration < track
+
+    def __ge__(self, track):
+        return self.duration >= track
+
+    def __le__(self, track):
+        return self.duration <= track
+
+
 album_1 = Album('Группа крови', 'Кино')
 album_2 = Album('Ночь', 'Кино')
 
@@ -72,3 +88,8 @@ print(album_1)
 print(album_2)
 
 print(track_1)
+
+print(track_1 >= track_5)
+print(track_1 <= track_2)
+print(track_2 < track_1)
+print(track_2 < track_5)
